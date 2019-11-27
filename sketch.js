@@ -4,7 +4,6 @@ let cnv;
 var volhistory = [];
 
 
-
 function preload() {
   illus = loadImage("./assets/controler.jpg");
   bumper = loadSound("./assets/TG1_new.mp3");
@@ -41,6 +40,10 @@ function draw() {
     point(i + 350, y + 75);
     stroke(25, 255, 205);
     strokeWeight(3);
+
+    point(i + 350, y + 45);
+    stroke(179, 66, 245);
+    strokeWeight(3);
   }
 
   var titlehome = " He seems to enjoy his work very much . . . ";
@@ -49,18 +52,15 @@ function draw() {
   fill(100);
   noStroke()
   text(titlehome, (width / 4)-220, (height / 2) + 150);
+
+  var titlehome = " click to play with the pattern of the sound ";
+  drawingContext.font = "normal 8px Karla";
+  drawingContext.textAlign = "RIGHT";
+  fill(200);
+  noStroke()
+  text(titlehome, (width / 4)-220, (height / 2) + 170);
 }
 
-
-  // function mousePressed() {
-  //   if (mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250) {
-  //     if (on) {
-  //       on = false;
-  //     } else {
-  //       on = true;
-  //     }
-  //   }
-  // }
 
 
   function windowResized() {
